@@ -26,22 +26,20 @@ async def heh(ctx, count_heh = 5):
 
 
 @bot.command()
-async def mem(ctx):
-    images = os.listdir('images')
-    img_name = random.choice()
-    with open(f'images/mem1.jpeg', 'rb') as f:
-
+async def cat(ctx):
+    animals = os.listdir('animals')
+    img_name1 = random.choice(animals)
+    with open(f'images/{img_name1}', 'rb') as f:
         picture = discord.File(f)
 
     await ctx.send(file=picture)
 
 
 @bot.command()
-async def animals(ctx):
+async def mem(ctx):
     images = os.listdir('images')
-    img_name = random.choice()
-    with open(f'images/kot1.png', 'rb') as f:
-
+    img_name = random.choice(images)
+    with open(f'images/{img_name}', 'rb') as f:
         picture = discord.File(f)
 
     await ctx.send(file=picture)
